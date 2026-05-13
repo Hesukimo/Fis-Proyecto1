@@ -124,16 +124,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6935645875834463421, guid: 64120cbd84437d946b19e6e633206937, type: 3}
   m_PrefabInstance: {fileID: 535134790}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &98864351 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 3060392297675951014, guid: 64120cbd84437d946b19e6e633206937, type: 3}
-  m_PrefabInstance: {fileID: 535134790}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &249915462 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6935645875834463421, guid: 64120cbd84437d946b19e6e633206937, type: 3}
   m_PrefabInstance: {fileID: 592148516}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &249915464 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8782411663709540833, guid: 64120cbd84437d946b19e6e633206937, type: 3}
+  m_PrefabInstance: {fileID: 592148516}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d307a47631e8a3340960c1f8fc72a6c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptCubo
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,7 +583,7 @@ PrefabInstance:
     - target: {fileID: 8239711360771122775, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_ConnectedBody
       value: 
-      objectReference: {fileID: 1882647777}
+      objectReference: {fileID: 1417275365}
     - target: {fileID: 8845815658898637409, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_Name
       value: Cube (9)
@@ -642,7 +648,7 @@ PrefabInstance:
     - target: {fileID: 8239711360771122775, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_ConnectedBody
       value: 
-      objectReference: {fileID: 647949667}
+      objectReference: {fileID: 1417275365}
     - target: {fileID: 8845815658898637409, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_Name
       value: Cube (4)
@@ -707,7 +713,7 @@ PrefabInstance:
     - target: {fileID: 8239711360771122775, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_ConnectedBody
       value: 
-      objectReference: {fileID: 1300675216}
+      objectReference: {fileID: 1417275365}
     - target: {fileID: 8845815658898637409, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_Name
       value: Cube (3)
@@ -722,11 +728,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6935645875834463421, guid: 64120cbd84437d946b19e6e633206937, type: 3}
   m_PrefabInstance: {fileID: 623817776}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &647949667 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 3060392297675951014, guid: 64120cbd84437d946b19e6e633206937, type: 3}
+--- !u!114 &680562086 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8782411663709540833, guid: 64120cbd84437d946b19e6e633206937, type: 3}
   m_PrefabInstance: {fileID: 623817776}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d307a47631e8a3340960c1f8fc72a6c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptCubo
 --- !u!1001 &727897164
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -782,7 +794,7 @@ PrefabInstance:
     - target: {fileID: 8239711360771122775, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_ConnectedBody
       value: 
-      objectReference: {fileID: 1745123496}
+      objectReference: {fileID: 1417275365}
     - target: {fileID: 8845815658898637409, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_Name
       value: Cube (2)
@@ -792,11 +804,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64120cbd84437d946b19e6e633206937, type: 3}
---- !u!54 &752419144 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 3060392297675951014, guid: 64120cbd84437d946b19e6e633206937, type: 3}
-  m_PrefabInstance: {fileID: 1471656278}
+--- !u!114 &749739934 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8782411663709540833, guid: 64120cbd84437d946b19e6e633206937, type: 3}
+  m_PrefabInstance: {fileID: 535134790}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d307a47631e8a3340960c1f8fc72a6c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptCubo
 --- !u!4 &752419150 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6935645875834463421, guid: 64120cbd84437d946b19e6e633206937, type: 3}
@@ -906,7 +924,7 @@ PrefabInstance:
     - target: {fileID: 8239711360771122775, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_ConnectedBody
       value: 
-      objectReference: {fileID: 752419144}
+      objectReference: {fileID: 1417275365}
     - target: {fileID: 8845815658898637409, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_Name
       value: Cube (10)
@@ -947,10 +965,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ScriptMuro
   cubos:
   - {fileID: 1300675210}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1281629421}
+  - {fileID: 1745123498}
+  - {fileID: 2093370287}
+  - {fileID: 680562086}
+  - {fileID: 249915464}
+  - {fileID: 2028910035}
+  - {fileID: 1882647785}
+  - {fileID: 912531721}
+  - {fileID: 749739934}
+  - {fileID: 1917511441}
+  - {fileID: 2016997525}
 --- !u!4 &877465319
 Transform:
   m_ObjectHideFlags: 0
@@ -983,6 +1008,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6935645875834463421, guid: 64120cbd84437d946b19e6e633206937, type: 3}
   m_PrefabInstance: {fileID: 727897164}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &912531721 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8782411663709540833, guid: 64120cbd84437d946b19e6e633206937, type: 3}
+  m_PrefabInstance: {fileID: 1966259693}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d307a47631e8a3340960c1f8fc72a6c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptCubo
 --- !u!1 &962277907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1069,7 +1105,7 @@ PrefabInstance:
     - target: {fileID: 8239711360771122775, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_ConnectedBody
       value: 
-      objectReference: {fileID: 2093370285}
+      objectReference: {fileID: 1417275365}
     - target: {fileID: 8845815658898637409, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_Name
       value: Cube (5)
@@ -1144,16 +1180,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64120cbd84437d946b19e6e633206937, type: 3}
---- !u!54 &1281629413 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 3060392297675951014, guid: 64120cbd84437d946b19e6e633206937, type: 3}
-  m_PrefabInstance: {fileID: 1920026754}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1281629419 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6935645875834463421, guid: 64120cbd84437d946b19e6e633206937, type: 3}
   m_PrefabInstance: {fileID: 1920026754}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1281629421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8782411663709540833, guid: 64120cbd84437d946b19e6e633206937, type: 3}
+  m_PrefabInstance: {fileID: 1920026754}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d307a47631e8a3340960c1f8fc72a6c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptCubo
 --- !u!114 &1300675210 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8782411663709540833, guid: 64120cbd84437d946b19e6e633206937, type: 3}
@@ -1170,11 +1212,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6935645875834463421, guid: 64120cbd84437d946b19e6e633206937, type: 3}
   m_PrefabInstance: {fileID: 8900049616681569332}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &1300675216 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 3060392297675951014, guid: 64120cbd84437d946b19e6e633206937, type: 3}
-  m_PrefabInstance: {fileID: 8900049616681569332}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1417275364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,7 +1225,6 @@ GameObject:
   - component: {fileID: 1417275367}
   - component: {fileID: 1417275366}
   - component: {fileID: 1417275365}
-  - component: {fileID: 1417275370}
   m_Layer: 0
   m_Name: Suelo
   m_TagString: Untagged
@@ -1316,22 +1352,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!138 &1417275370
-FixedJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417275364}
-  serializedVersion: 1
-  m_ConnectedBody: {fileID: 0}
-  m_ConnectedArticulationBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!1001 &1471656278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1387,7 +1407,7 @@ PrefabInstance:
     - target: {fileID: 8239711360771122775, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_ConnectedBody
       value: 
-      objectReference: {fileID: 1281629413}
+      objectReference: {fileID: 1417275365}
     - target: {fileID: 8845815658898637409, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_Name
       value: Cube
@@ -1700,21 +1720,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6935645875834463421, guid: 64120cbd84437d946b19e6e633206937, type: 3}
   m_PrefabInstance: {fileID: 1101658202}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &1745123496 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 3060392297675951014, guid: 64120cbd84437d946b19e6e633206937, type: 3}
+--- !u!114 &1745123498 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8782411663709540833, guid: 64120cbd84437d946b19e6e633206937, type: 3}
   m_PrefabInstance: {fileID: 1101658202}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &1882647777 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 3060392297675951014, guid: 64120cbd84437d946b19e6e633206937, type: 3}
-  m_PrefabInstance: {fileID: 1730737017}
-  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d307a47631e8a3340960c1f8fc72a6c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptCubo
 --- !u!4 &1882647783 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6935645875834463421, guid: 64120cbd84437d946b19e6e633206937, type: 3}
   m_PrefabInstance: {fileID: 1730737017}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1882647785 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8782411663709540833, guid: 64120cbd84437d946b19e6e633206937, type: 3}
+  m_PrefabInstance: {fileID: 1730737017}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d307a47631e8a3340960c1f8fc72a6c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptCubo
+--- !u!114 &1917511441 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8782411663709540833, guid: 64120cbd84437d946b19e6e633206937, type: 3}
+  m_PrefabInstance: {fileID: 1471656278}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d307a47631e8a3340960c1f8fc72a6c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptCubo
 --- !u!1001 &1920026754
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1835,7 +1878,7 @@ PrefabInstance:
     - target: {fileID: 8239711360771122775, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_ConnectedBody
       value: 
-      objectReference: {fileID: 98864351}
+      objectReference: {fileID: 1417275365}
     - target: {fileID: 8845815658898637409, guid: 64120cbd84437d946b19e6e633206937, type: 3}
       propertyPath: m_Name
       value: Cube (8)
@@ -1845,16 +1888,44 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64120cbd84437d946b19e6e633206937, type: 3}
+--- !u!114 &2016997525 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8782411663709540833, guid: 64120cbd84437d946b19e6e633206937, type: 3}
+  m_PrefabInstance: {fileID: 870262069}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d307a47631e8a3340960c1f8fc72a6c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptCubo
 --- !u!4 &2028910033 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6935645875834463421, guid: 64120cbd84437d946b19e6e633206937, type: 3}
   m_PrefabInstance: {fileID: 1057937651}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &2093370285 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 3060392297675951014, guid: 64120cbd84437d946b19e6e633206937, type: 3}
+--- !u!114 &2028910035 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8782411663709540833, guid: 64120cbd84437d946b19e6e633206937, type: 3}
+  m_PrefabInstance: {fileID: 1057937651}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d307a47631e8a3340960c1f8fc72a6c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptCubo
+--- !u!114 &2093370287 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8782411663709540833, guid: 64120cbd84437d946b19e6e633206937, type: 3}
   m_PrefabInstance: {fileID: 727897164}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d307a47631e8a3340960c1f8fc72a6c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptCubo
 --- !u!1001 &8900049616681569332
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -61,8 +61,6 @@ public class PelotaController : MonoBehaviour
         transform.RotateAround(rotateLocation.transform.position, new Vector3(0, 1 * rotacionHorizontal, 0), velocidadRotacion * Time.deltaTime);
         transform.Rotate(velocidadRotacion * Time.deltaTime * rotacionVertical, 0, 0);
 
-        //transform.Rotate(velocidadRotacion * Time.deltaTime * rotacionVertical, velocidadRotacion * Time.deltaTime * rotacionHorizontal, 0);
-
         // Limpiar nulls
         pelotas.RemoveAll(p => p == null);
 
@@ -77,6 +75,7 @@ public class PelotaController : MonoBehaviour
     void DispararBola()
     {
         if (GameManager.instance.ballAmount > 0) {
+            //Instanciamos la pelota, le asignamos los valores y lo añadimos a nuestra lista de pelotas
             var part = Instantiate(pelota[indicePelota], spawnLocation.position, Quaternion.identity);
             part.GetComponent<Pelota>().Iniciar(vo, direccion, lifespan, grav);
             pelotas.Add(part);
@@ -114,6 +113,7 @@ public class PelotaController : MonoBehaviour
 
     public void ChangeAmmo()
     {
+        //Cambiar entre municiones
         indicePelota++;
         if (indicePelota >= pelota.Length)
         {

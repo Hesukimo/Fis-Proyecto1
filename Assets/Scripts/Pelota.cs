@@ -73,12 +73,15 @@ public class Pelota : MonoBehaviour
 
         foreach (Collider objeto in colliders)
         {
+
+            //Aplica fuerza de explosión si tiene rigidbody
             Rigidbody rbObjeto = objeto.GetComponent<Rigidbody>();
             if (rbObjeto != null)
             {
                 rbObjeto.AddExplosionForce(fuerzaExplosion, transform.position, radioExplosion); // Afectamos los cubos en motor de físicas de Unity
                 Debug.Log("Golpeado a " + rbObjeto.gameObject.name);
             }
+            //En caso de ser un cubo lo daña
             ScriptCubo sc = objeto.GetComponent<ScriptCubo>();
             if (sc != null)
             {

@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
         score--;
         int porcentaje = (int)CalculateScore();
         scoreText.text = "BLOQUES RESTANTES: " + porcentaje + "%";
-        //Win Condition
+        //Win Condition por destrucción de bloques
         if (porcentaje <= winCon)
         {
             Finish();

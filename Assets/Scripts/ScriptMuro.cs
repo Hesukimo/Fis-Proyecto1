@@ -3,29 +3,21 @@ using UnityEngine;
 public class ScriptMuro : MonoBehaviour
 {
 	public ScriptCubo[] cubos;
-	
-	// Start is called once before the first execution of Update after the MonoBehaviour is created
-	void Start()
+
+    private void Awake()
     {
-		cubos = GetComponentsInChildren<ScriptCubo>();
-		float vidamuro = 100 * cubos.Length; // Vida total del muro, por ejemplo, 100 por cada cubo
-	}
+        cubos = GetComponentsInChildren<ScriptCubo>();
+        //float vidamuro = 100 * cubos.Length; // Vida total del muro, por ejemplo, 100 por cada cubo
+    }
 
     // Update is called once per frame
     void Update()
     {
-        VidaTotal();
 	}
 
-	public float VidaTotal() // Calcula la vida total del muro sumando la vida de cada cubo
+	public int VidaTotal() // Calcula la vida total del muro sumando la cantidad de cubos
 	{
-		float total = 0f;
-		foreach (ScriptCubo cubo in cubos)
-		{
-			if (cubo != null)
-				total += cubo.vidaActual;
-		}
-		return total;
+		return cubos.Length;
 	}
 
 	

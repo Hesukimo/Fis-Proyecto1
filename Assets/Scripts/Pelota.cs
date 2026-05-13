@@ -47,10 +47,9 @@ public class Pelota : MonoBehaviour
 		// Si colisiona con un muro, inflige daño
 		ScriptCubo cubo = collision.gameObject.GetComponent<ScriptCubo>(); // Intenta obtener el componente ScriptCubo del objeto con el que colisionó
 
-
 		if (collision.gameObject.name.StartsWith("Cube"))
         {
-            cubo.RecibirDanio(danio); // Inflige daño al cubo
+            //cubo.RecibirDanio(danio); // Inflige daño al cubo
             Explotar();
             StartCoroutine(DestruirDespues());
         }
@@ -62,8 +61,8 @@ public class Pelota : MonoBehaviour
 
         if (collision.gameObject.name == ("Caballero"))
         {
-            Debug.Log("caballero hit");
-            GameManager.instance.Finish();
+            Debug.Log("Caballero hit");
+            GameManager.instance.KnightKilled();
         }
     }
 
@@ -79,6 +78,11 @@ public class Pelota : MonoBehaviour
             {
                 rbObjeto.AddExplosionForce(fuerzaExplosion, transform.position, radioExplosion); // Afectamos los cubos en motor de físicas de Unity
                 Debug.Log("Golpeado a " + rbObjeto.gameObject.name);
+            }
+            ScriptCubo sc = objeto.GetComponent<ScriptCubo>();
+            if (sc != null)
+            {
+                sc.RecibirDanio(danio);
             }
         }
     }

@@ -6,14 +6,17 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public int ballAmount = 5;
+    public int score = 0;
 
     [SerializeField] private TextMeshProUGUI resultText;
     [SerializeField] private TextMeshProUGUI bulletText;
+    [SerializeField] private TextMeshProUGUI scoreText;
 
     private void Awake()
     {
         instance = this;
         UpdateBulletText();
+        AddScore(0);
     }
 
     private void Update()
@@ -38,7 +41,13 @@ public class GameManager : MonoBehaviour
 
     public void UpdateBulletText()
     {
-        bulletText.text = "CANNONBALLS: " + ballAmount;
+        bulletText.text = "MUNICIÓN: " + ballAmount;
+    }
+
+    public void AddScore(int amount)
+    {
+        score += amount;
+        scoreText.text = "PUNTUACIÓN: " + score;
     }
 
 }

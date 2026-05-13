@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6564129329241606778}
   - component: {fileID: -2098773275658535189}
   m_Layer: 0
-  m_Name: Pelota
+  m_Name: Pelota3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.72272, y: 0.54, z: 0.02}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -69,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bb273d0c982a9bf41ade8e2f4e8d22aa, type: 2}
+  - {fileID: 2100000, guid: 7fc0acf56a0d31e46988754b290eee18, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,13 +126,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Pelota
   ini: {x: 0, y: 0, z: 0}
-  danio: 50
+  danio: 25
   vo: 0
   vel0: {x: 0, y: 0, z: 0}
   lifespan: 0
   life: 0
-  radioExplosion: 2
-  fuerzaExplosion: 25
+  radioExplosion: 4
+  fuerzaExplosion: 20
 --- !u!54 &-2098773275658535189
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -12,7 +12,8 @@ public class PelotaController : MonoBehaviour
 
     private Vector3 direccion;
 
-    [SerializeField] private GameObject pelota;
+    [SerializeField] private GameObject[] pelota;
+    private int indicePelota = 0;
     private List<GameObject> pelotas = new List<GameObject>();
 
     private LineRenderer lr;
@@ -24,9 +25,13 @@ public class PelotaController : MonoBehaviour
 
     public float velocidadRotacion = 50f;
 
+    private Renderer renderizador;
+
     private void Awake()
     {
         lr = GetComponent<LineRenderer>();
+        renderizador = GetComponent<Renderer>();
+        renderizador.material = pelota[indicePelota].GetComponent<Renderer>().sharedMaterial;
     }
 
     void Update()
@@ -72,7 +77,7 @@ public class PelotaController : MonoBehaviour
     void DispararBola()
     {
         if (GameManager.instance.ballAmount > 0) {
-            var part = Instantiate(pelota, spawnLocation.position, Quaternion.identity);
+            var part = Instantiate(pelota[indicePelota], spawnLocation.position, Quaternion.identity);
             part.GetComponent<Pelota>().Iniciar(vo, direccion, lifespan, grav);
             pelotas.Add(part);
 
@@ -105,5 +110,15 @@ public class PelotaController : MonoBehaviour
             Vector3 point = new Vector3(start.x + vel.x * t, start.y + vel.y * t - (grav * t * t) / 2, start.z + vel.z * t);
             lr.SetPosition(i, point);
         }
+    }
+
+    public void ChangeAmmo()
+    {
+        indicePelota++;
+        if (indicePelota >= pelota.Length)
+        {
+            indicePelota = 0;
+        }
+        renderizador.material = pelota[indicePelota].GetComponent<Renderer>().sharedMaterial;
     }
 }

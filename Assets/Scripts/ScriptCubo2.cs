@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ScriptCubo : MonoBehaviour
+public class ScriptCubo2 : MonoBehaviour
 {
 	public float vidaMaxima = 100f;
 	public float vidaActual;

@@ -4,6 +4,10 @@ public class ScriptCubo : MonoBehaviour
 {
 	public float vidaMaxima = 100f;
 	public float vidaActual;
+	//public int puntosAlRomper = 10;
+
+    // Referencia al sistema de puntos
+    //public SistemaPuntos sistemaPuntos;
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
 	void Start()
 	{
@@ -23,6 +27,9 @@ public class ScriptCubo : MonoBehaviour
 		if (vidaActual <= 0)
 		{
 			vidaActual = 0;
+			// Sumar puntos
+            //sistemaPuntos.SumarPuntos(puntosAlRomper);
+
 			Destroy(gameObject); // elimina el cubo
 		}
 	}

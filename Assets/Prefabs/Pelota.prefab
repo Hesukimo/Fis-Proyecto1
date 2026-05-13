@@ -130,7 +130,8 @@ MonoBehaviour:
   vel0: {x: 0, y: 0, z: 0}
   lifespan: 0
   life: 0
-  cubo: {fileID: 8782411663709540833, guid: 64120cbd84437d946b19e6e633206937, type: 3}
+  radioExplosion: 2
+  fuerzaExplosion: 20
 --- !u!54 &-2098773275658535189
 Rigidbody:
   m_ObjectHideFlags: 0

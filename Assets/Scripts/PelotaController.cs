@@ -4,6 +4,7 @@ using UnityEngine;
 public class PelotaController : MonoBehaviour
 {
     [SerializeField] private Transform spawnLocation;
+    [SerializeField] private Transform rotateLocation;
 
     [SerializeField] private float vo;
     [SerializeField] private float lifespan;
@@ -52,7 +53,10 @@ public class PelotaController : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow)) { rotacionVertical = 1; }
         if (Input.GetKey(KeyCode.DownArrow)) { rotacionVertical = -1; }
 
-        transform.Rotate(velocidadRotacion * Time.deltaTime * rotacionVertical, velocidadRotacion * Time.deltaTime * rotacionHorizontal, 0);
+        transform.RotateAround(rotateLocation.transform.position, new Vector3(0, 1 * rotacionHorizontal, 0), velocidadRotacion * Time.deltaTime);
+        transform.Rotate(velocidadRotacion * Time.deltaTime * rotacionVertical, 0, 0);
+
+        //transform.Rotate(velocidadRotacion * Time.deltaTime * rotacionVertical, velocidadRotacion * Time.deltaTime * rotacionHorizontal, 0);
 
         // Limpiar nulls
         pelotas.RemoveAll(p => p == null);
@@ -67,19 +71,20 @@ public class PelotaController : MonoBehaviour
 
     void DispararBola()
     {
-        var part = Instantiate(pelota, spawnLocation.position, Quaternion.identity);
-        part.GetComponent<Pelota>().Iniciar(vo, direccion, lifespan, grav);
-        pelotas.Add(part);
+        if (GameManager.instance.ballAmount > 0) {
+            var part = Instantiate(pelota, spawnLocation.position, Quaternion.identity);
+            part.GetComponent<Pelota>().Iniciar(vo, direccion, lifespan, grav);
+            pelotas.Add(part);
+
+            GameManager.instance.ballAmount--;
+            GameManager.instance.UpdateBulletText();
+        }
     }
 
     void UpdateParticlePosition(Pelota p, float time)
     {
         // Actualizar posición
-        p.transform.position = new Vector3(
-            p.ini.x + p.vel0.x * time,
-            p.ini.y + p.vel0.y * time - (grav * time * time) / 2,
-            p.ini.z + p.vel0.z * time
-        );
+        p.transform.position = new Vector3(p.ini.x + p.vel0.x * time, p.ini.y + p.vel0.y * time - (grav * time * time) / 2, p.ini.z + p.vel0.z * time);
 
         if (p.life > p.lifespan)
         {

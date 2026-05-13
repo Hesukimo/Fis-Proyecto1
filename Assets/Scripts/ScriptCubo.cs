@@ -16,14 +16,16 @@ public class ScriptCubo : MonoBehaviour
 
 	}
 
-	public void RecibirDanio(float cantidad)
+	public void RecibirDanio(float cantidad) // El daño se resta de la vida actual
 	{
-		vidaActual -= cantidad;
+		vidaActual -= cantidad; // Restar el daño a la vida actual
 
 		if (vidaActual <= 0)
 		{
 			vidaActual = 0;
 			Destroy(gameObject); // elimina el cubo
+
 		}
+		
 	}
 }

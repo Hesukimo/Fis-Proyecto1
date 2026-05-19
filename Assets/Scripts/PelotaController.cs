@@ -68,7 +68,7 @@ public class PelotaController : MonoBehaviour
         foreach (GameObject pel in pelotas)
         {
             var script = pel.GetComponent<Pelota>();
-            UpdateParticlePosition(script, script.life);
+            UpdatePelotaPosition(script, script.life);
         }
     }
 
@@ -85,7 +85,7 @@ public class PelotaController : MonoBehaviour
         }
     }
 
-    void UpdateParticlePosition(Pelota p, float time)
+    void UpdatePelotaPosition(Pelota p, float time)
     {
         // Actualizar posición
         p.transform.position = new Vector3(p.ini.x + p.vel0.x * time, p.ini.y + p.vel0.y * time - (grav * time * time) / 2, p.ini.z + p.vel0.z * time);

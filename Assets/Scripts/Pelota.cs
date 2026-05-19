@@ -19,6 +19,7 @@ public class Pelota : MonoBehaviour
     //Explosión
     public float radioExplosion = 5f;
     public float fuerzaExplosion = 2000f;
+    private bool golpeado = false;
 
     private Rigidbody rb;
 
@@ -68,25 +69,28 @@ public class Pelota : MonoBehaviour
 
     private void Explotar()
     {
-        // Detecta colliders dentro del radio
-        Collider[] colliders = Physics.OverlapSphere(transform.position, radioExplosion);
+        if (!golpeado) {
+            // Detecta colliders dentro del radio
+            Collider[] colliders = Physics.OverlapSphere(transform.position, radioExplosion);
 
-        foreach (Collider objeto in colliders)
-        {
+            foreach (Collider objeto in colliders)
+            {
 
-            //Aplica fuerza de explosión si tiene rigidbody
-            Rigidbody rbObjeto = objeto.GetComponent<Rigidbody>();
-            if (rbObjeto != null)
-            {
-                rbObjeto.AddExplosionForce(fuerzaExplosion, transform.position, radioExplosion); // Afectamos los cubos en motor de físicas de Unity
-                Debug.Log("Golpeado a " + rbObjeto.gameObject.name);
+                //Aplica fuerza de explosión si tiene rigidbody
+                Rigidbody rbObjeto = objeto.GetComponent<Rigidbody>();
+                if (rbObjeto != null)
+                {
+                    rbObjeto.AddExplosionForce(fuerzaExplosion, transform.position, radioExplosion); // Afectamos los cubos en motor de físicas de Unity
+                    Debug.Log("Golpeado a " + rbObjeto.gameObject.name);
+                }
+                //En caso de ser un cubo lo daña
+                ScriptCubo sc = objeto.GetComponent<ScriptCubo>();
+                if (sc != null)
+                {
+                    sc.RecibirDanio(danio);
+                }
             }
-            //En caso de ser un cubo lo daña
-            ScriptCubo sc = objeto.GetComponent<ScriptCubo>();
-            if (sc != null)
-            {
-                sc.RecibirDanio(danio);
-            }
+            golpeado = true;
         }
     }
 
